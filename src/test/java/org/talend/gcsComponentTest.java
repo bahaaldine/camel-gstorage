@@ -20,7 +20,9 @@ public class gcsComponentTest extends CamelTestSupport {
         return new RouteBuilder() {
             public void configure() {
                 from("gcs://foo")
-                  .to("gcs://bar?apiKey=GOOGLVRBWRFSXHXKU4MC&apiKeySecret=91it9olvPmsC3FvWLApNloq/FZVTChtLOmmzPDyz&bucket=talenddemo&url=commondatastorage.googleapis.com&filePath=/Users/bahaaldine/Talend/data/Roadshow/IN&fileName=personnes1113.xml&contentType=text/xml")
+                  .setHeader("CamelFileParent", constant("/Users/bahaaldine/Talend/data/Roadshow/IN") )
+                  .setHeader("CamelFileName", constant("personnes1164.xml") )
+                  .to("gcs://bar?apiKey=GOOGLVRBWRFSXHXKU4MC&apiKeySecret=91it9olvPmsC3FvWLApNloq/FZVTChtLOmmzPDyz&bucket=talenddemo&url=commondatastorage.googleapis.com&contentType=text/xml")
                   .to("mock:result");
             }
         };

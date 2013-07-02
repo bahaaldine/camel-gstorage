@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="3.957" errors="0" skipped="0" tests="1" name="org.talend.gcsComponentTest">
+<testsuite failures="0" time="7.351" errors="0" skipped="0" tests="1" name="org.talend.gcsComponentTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib"/>
@@ -21,7 +21,7 @@
     <property name="basedir" value="/Users/bahaaldine/Talend/workspace/CamelGoogleStorage/camel-gstorage"/>
     <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib/endorsed"/>
     <property name="os.arch" value="x86_64"/>
-    <property name="surefire.real.class.path" value="/Users/bahaaldine/Talend/workspace/CamelGoogleStorage/camel-gstorage/target/surefire/surefirebooter5456139430641054970.jar"/>
+    <property name="surefire.real.class.path" value="/Users/bahaaldine/Talend/workspace/CamelGoogleStorage/camel-gstorage/target/surefire/surefirebooter730621402325225754.jar"/>
     <property name="java.io.tmpdir" value="/var/folders/f3/xk3xnscs42v7byq956brtk5w0000gn/T/"/>
     <property name="line.separator" value="
 "/>
@@ -45,7 +45,7 @@
     <property name="java.vm.specification.version" value="1.7"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre"/>
-    <property name="sun.java.command" value="/Users/bahaaldine/Talend/workspace/CamelGoogleStorage/camel-gstorage/target/surefire/surefirebooter5456139430641054970.jar /Users/bahaaldine/Talend/workspace/CamelGoogleStorage/camel-gstorage/target/surefire/surefire5779622764077299534tmp /Users/bahaaldine/Talend/workspace/CamelGoogleStorage/camel-gstorage/target/surefire/surefire6269862564570194592tmp"/>
+    <property name="sun.java.command" value="/Users/bahaaldine/Talend/workspace/CamelGoogleStorage/camel-gstorage/target/surefire/surefirebooter730621402325225754.jar /Users/bahaaldine/Talend/workspace/CamelGoogleStorage/camel-gstorage/target/surefire/surefire3830117930797998317tmp /Users/bahaaldine/Talend/workspace/CamelGoogleStorage/camel-gstorage/target/surefire/surefire9110438004909173462tmp"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="fr"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
@@ -63,5 +63,5 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16|sanef.groupe|*.sanef.groupe|10.110.120.145|10.20.20.5|192.16.208.16|192.16.208.47|localhost|*.localhost|iock.naville.ch|*.iock.naville.ch|cite.naville.ch|*.cite.naville.ch|segal.naville.ch|*.segal.naville.ch"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="3.788" classname="org.talend.gcsComponentTest" name="testgcs"/>
+  <testcase time="7.203" classname="org.talend.gcsComponentTest" name="testgcs"/>
 </testsuite>

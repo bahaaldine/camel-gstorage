@@ -43,20 +43,24 @@ public class gcsProducer extends DefaultProducer {
     }
 
     public void process(Exchange exchange) throws Exception {
-    	System.out.println(exchange.getIn().getBody() + " / " + endpoint.getApiKey() + " / " + endpoint.getApiKeySecret()  + " / " + endpoint.getBucket()  + " / " + endpoint.getUrl() );
+    	
+    	String fileName = exchange.getIn().getHeader("CamelFileName", String.class);
+    	String filePath = exchange.getIn().getHeader("CamelFileParent", String.class);
+    	
+    	LOG.info("Sending "+ fileName + " to http://" + endpoint.getUrl() + "/" + endpoint.getBucket() );
     	
     	HttpTransport transport = GoogleTransport.create();
 		GoogleStorageAuthentication.authorize(transport, endpoint.getApiKey(), endpoint.getApiKeySecret());
 		
 		HttpRequest request = transport.buildPutRequest();
 		
-		FileInputStream testFile = new FileInputStream( endpoint.getFilePath() + "/" + endpoint.getFileName() );
+		FileInputStream testFile = new FileInputStream( filePath + "/" + fileName );
 		
 		InputStreamContent isc = new InputStreamContent();
 		isc.inputStream = new ByteArrayInputStream( IOUtils.toByteArray(testFile) );
 		isc.type = endpoint.getContentType();
 		request.content = isc;
-		request.url = new GenericUrl("http://"+ endpoint.getUrl() +"/"+ endpoint.getBucket() +"/" + URLEncoder.encode(endpoint.getFileName(), "utf8"));		
+		request.url = new GenericUrl("http://"+ endpoint.getUrl() +"/"+ endpoint.getBucket() +"/" + URLEncoder.encode( fileName, "utf8"));		
 		GoogleHeaders headers = (GoogleHeaders) request.headers;
 		headers.date = httpDateFormat.format(new Date());
 		try {
